@@ -16,6 +16,20 @@ Added
 * Added ``AdvertisementServiceData`` in BLEDevice in macOS devices
 * Protection levels (encryption) in Windows backend pairing. Solves #405.
 * Philips Hue lamp example script. Relates to #405.
+* Added more specific type hints for ``BleakGATTServiceCollection`` properties.
+* Added ``asyncio`` task to disconnect devices on event loop crash in BlueZ backend.
+* Added filtering on advertisement data callbacks on BlueZ backend so that
+  callbacks only occur when advertising data changes like on macOS backend.
+* Added fallback to try ``org.bluez.Adapter1.ConnectDevice`` when trying to connect
+  a device in BlueZ backend.
+
+Changed
+~~~~~~~
+
+* Changed ``BleakScanner.set_scanning_filter()`` from async method to normal method.
+* Changed BlueZ backend to use ``dbus-next`` instead of ``txdbus``.
+* Changed ``BleakClient.is_connected`` from async method to property.
+* Consolidated D-Bus signal debug messages in BlueZ backend.
 
 Fixed
 ~~~~~
