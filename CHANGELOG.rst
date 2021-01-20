@@ -13,6 +13,9 @@ and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0
 Added
 ~~~~~
 
+* Added ``AdvertisementServiceData`` in BLEDevice in macOS devices
+* Protection levels (encryption) in Windows backend pairing. Solves #405.
+* Philips Hue lamp example script. Relates to #405.
 * Added more specific type hints for ``BleakGATTServiceCollection`` properties.
 * Added ``asyncio`` task to disconnect devices on event loop crash in BlueZ backend.
 * Added filtering on advertisement data callbacks on BlueZ backend so that
